@@ -10,9 +10,9 @@
 .sell__form {
     background-color: white;
     padding: 30px;
-    margin: 0 10%;
+    margin: auto;
     margin-bottom: 130px;
-    min-width: 300px;
+    min-width: 315px;
 }
 
 .custom-file-input:hover {

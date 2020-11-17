@@ -1,5 +1,5 @@
 .view {
-    padding: 40px;
+    padding: 40px 20px;
 }
 
 .view__product {
@@ -11,7 +11,7 @@
 
 .view__imageContainer {
     width: 100%;
-    margin: 0 10px;
+    margin: 0 !important;
 }
 
 .view__imageContainer > img {
@@ -90,8 +90,9 @@
 }
 
 .view__review > button {
-    width: 20%;
-    margin-left: 80%;
+    width: 100%;
+    max-width: 280px;
+    margin: auto;
     background-color: #f0c14b;
     border: 1px solid; 
     border-color: #a88734 #9c7e31 #846a29;

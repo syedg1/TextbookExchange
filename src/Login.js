@@ -24,7 +24,7 @@ function Login() {
         <div className='login'>
             <div className="login__card">
                 <h5>Please log in using your Mac ID and password.</h5>
-                {(errors.user || errors.password) && <p className='login__required'>MAC ID and password required</p>}
+                {(errors.user || errors.password) && <p className='login__required'>MAC ID and Password required</p>}
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Form.Row>
                     <Form.Group as={Col} md="12" controlId="loginUser">

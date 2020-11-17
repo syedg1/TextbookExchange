@@ -8,6 +8,7 @@
 
 .header__logoContainer {
     flex-basis: 10%;
+    margin-bottom: 10px;
     justify-content: left;
     display: inline-flex;
 }
@@ -94,4 +95,8 @@
 
 .nav-link {
     color:white !important;
+}
+
+.navbar-toggler {
+    margin-bottom: 10px !important;
 }

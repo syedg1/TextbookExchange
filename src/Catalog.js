@@ -12,7 +12,7 @@ function Catalog() {
                 <Col md={3} className='px-0'>
                     <Product 
                         id = '1'
-                        title = 'Introduction to Robotics : Mechanics and Control'
+                        title = 'Introduction to Robotics: Mechanics and Control'
                         price = {189.99}
                         rating = {5}
                         image = 'https://campusstore.mcmaster.ca/cgi-mcm/ws/getTradeImage.pl?isbn=9780133489798&full_ind='
@@ -31,7 +31,7 @@ function Catalog() {
                     <Product 
                         id = '3'
                         title = 'Health Illness and Aging'
-                        price = {149.50}
+                        price = {149.55}
                         rating = {3}
                         image = 'https://campusstore.mcmaster.ca/cgi-mcm/ws/getTradeImage.pl?isbn=9780826134042&full_ind='
                     />
@@ -51,7 +51,7 @@ function Catalog() {
                     <Product 
                         id = '5'
                         title = 'Propositional and Predicate Calculus'
-                        price = {99.50}
+                        price = {99.59}
                         rating = {5}
                         image = 'https://campusstore.mcmaster.ca/cgi-mcm/ws/getTradeImage.pl?isbn=9781852339210&full_ind='
                     />
@@ -60,7 +60,7 @@ function Catalog() {
                     <Product 
                         id = '6'
                         title = 'Introduction to Electrodynamics'
-                        price = {84.50}
+                        price = {84.59}
                         rating = {5}
                         image = 'https://campusstore.mcmaster.ca/cgi-mcm/ws/getTradeImage.pl?isbn=9781108420419&full_ind='
                     />
@@ -69,7 +69,7 @@ function Catalog() {
                     <Product 
                         id = '7'
                         title = 'Clean Code: An Introduction to Agile Software Craftmanship'
-                        price = {62.50}
+                        price = {62.59}
                         rating = {4}
                         image = 'https://campusstore.mcmaster.ca/cgi-mcm/ws/getTradeImage.pl?isbn=9780132350884&full_ind='
                     />
@@ -106,7 +106,7 @@ function Catalog() {
                 <Col md={3} className='px-0'>
                     <Product 
                         id = '11'
-                        title = 'Engineering Hydrology: An Introduction to Processes, Analysis, and Modelling'
+                        title = 'Engineering Hydrology: Processes, Analysis, and Modelling'
                         price = {169.75}
                         rating = {5}
                         image = 'https://campusstore.mcmaster.ca/cgi-mcm/ws/getTradeImage.pl?isbn=9781259641978&full_ind='
@@ -136,7 +136,7 @@ function Catalog() {
                     <Product 
                         id = '14'
                         title = 'Silicon VLSI Technology'
-                        price = {190.00}
+                        price = {190.99}
                         rating = {4}
                         image = 'https://campusstore.mcmaster.ca/cgi-mcm/ws/getTradeImage.pl?isbn=9780130850379&full_ind='
                     />
@@ -191,7 +191,7 @@ function Catalog() {
                 <Col md={3} className='px-0'>
                     <Product 
                         id = '20'
-                        title = 'Measurements and Their Uncertainties: A Practical Guide to Modern Error Analysis'
+                        title = 'Measurements and Their Uncertainties: Modern Error Analysis'
                         price = {39.99}
                         rating = {3}
                         image = 'https://campusstore.mcmaster.ca/cgi-mcm/ws/getTradeImage.pl?isbn=9780199566334&full_ind='

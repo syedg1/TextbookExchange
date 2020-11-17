@@ -102,7 +102,7 @@ function Home() {
                     />
                     <Product 
                         id = '11'
-                        title = 'Engineering Hydrology: An Introduction to Processes, Analysis, and Modelling'
+                        title = 'Engineering Hydrology: Processes, Analysis, and Modelling'
                         price = {169.75}
                         rating = {5}
                         image = 'https://campusstore.mcmaster.ca/cgi-mcm/ws/getTradeImage.pl?isbn=9781259641978&full_ind='
@@ -142,7 +142,7 @@ function Home() {
                     />
                     <Product 
                         id = '20'
-                        title = 'Measurements and Their Uncertainties: A Practical Guide to Modern Error Analysis'
+                        title = 'Measurements and Their Uncertainties: Modern Error Analysis'
                         price = {39.99}
                         rating = {3}
                         image = 'https://campusstore.mcmaster.ca/cgi-mcm/ws/getTradeImage.pl?isbn=9780199566334&full_ind='

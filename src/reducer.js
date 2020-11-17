@@ -3,7 +3,8 @@ export const initialState = {
     user: null,
     viewProduct: null,
     latestOrder: [],
-    latestTotal: 0
+    latestTotal: 0,
+    shippingType: '',
 }
 
 export const getBasketTotal = (basket) => 
@@ -33,6 +34,7 @@ const reducer = (state, action) => {
                 ...state,
                 latestOrder: [...state.basket],
                 latestTotal: action.total,
+                shippingType: action.shipping,
                 basket: []
             }
         case 'SET_USER':

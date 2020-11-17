@@ -17,7 +17,8 @@ function Payment() {
     const history = useHistory();
     const [disabled, setDisabled] = useState(true);
     const [paymentError, setError] = useState(null);
-    const [shippingVal, setShippingVal] = useState('standard');
+    const [shippingVal, setShippingVal] = useState('Standard Shipping');
+    const [shippingCost, setShippingCost] = useState(0);
     const { register, handleSubmit, errors, reset } = useForm();
 
 
@@ -26,11 +27,17 @@ function Payment() {
         setError(e.error ? e.error.message: null);
     }
 
+    const updateShipping = (cost, type) => {
+        setShippingCost(cost);
+        setShippingVal(type);
+    }
+
     const onSubmit = data => {
         console.log(data);
         dispatch({
             type: 'CONFIRM_ORDER',
-            total: getBasketTotal(basket)
+            total: getBasketTotal(basket) + shippingCost,
+            shipping: shippingVal
         })
         history.replace('/order');
     }
@@ -64,6 +71,7 @@ function Payment() {
                                     ref={register({ required: true })}
                                     type="text"
                                     placeholder="eg. L1Z 4K2"
+
                                     />
                                     {errors.postal && <p className='payment__error'>This field is required!</p>}
                                     </Form.Group>
@@ -89,33 +97,33 @@ function Payment() {
                                 <Form.Check 
                                     type='radio'
                                     name='shipping'
-                                    value='standard'
+                                    value='Standard Shipping'
                                     label='Standard Shipping'
                                     className='payment__radio'
                                     ref={register({ required: true })}
-                                    checked={shippingVal == 'standard'}
-                                    onClick={() => setShippingVal('standard')}
+                                    checked={shippingVal == 'Standard Shipping'}
+                                    onClick={() => updateShipping( 0, 'Standard Shipping')}
                                 />
 
                                 <Form.Check 
                                     type='radio'
                                     name='shipping'
-                                    value='express'
-                                    label='Express Shipping'
+                                    value='Express Shipping (3-5 Business Days) - $9.99'
+                                    label='Express Shipping (3-5 Business Days) - $9.99'
                                     className='payment__radio'
                                     ref={register({ required: true })}
-                                    checked={shippingVal == 'express'}
-                                    onClick={() => setShippingVal('express')}
+                                    checked={shippingVal == 'Express Shipping (3-5 Business Days) - $9.99'}
+                                    onClick={() => updateShipping( 9.99, 'Express Shipping (3-5 Business Days) - $9.99')}
                                 />
                                 <Form.Check 
                                     type='radio'
                                     name='shipping'
-                                    value='nextDay'
-                                    label='Next Day Shipping'
+                                    value='Next Day Shipping (1 Business Day) - $11.99'
+                                    label='Next Day Shipping (1 Business Day) - $11.99'
                                     className='payment__radio'
                                     ref={register({ required: true })}
-                                    checked={shippingVal == 'nextDay'}
-                                    onClick={() => setShippingVal('nextDay')}
+                                    checked={shippingVal == 'Next Day Shipping (1 Business Day) - $11.99'}
+                                    onClick={() => updateShipping( 11.99, 'Next Day Shipping (1 Business Day) - $11.99')}
                                 />
                             </div>
                         </div>
@@ -150,7 +158,7 @@ function Payment() {
                                             <h5>Order Total: {value}</h5>
                                         )}
                                         decimalScale={2}
-                                        value={getBasketTotal(basket)}
+                                        value={getBasketTotal(basket) + shippingCost}
                                         displayType={'text'}
                                         thousandSeparator={true}
                                         prefix={'$'}

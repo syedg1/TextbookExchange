@@ -6,12 +6,13 @@ import CurrencyFormat from 'react-currency-format';
 import { useStateValue } from './StateProvider';
 
 function Order() {
-    const[{latestOrder, latestTotal}] = useStateValue();
+    const[{latestOrder, latestTotal, shippingType}] = useStateValue();
+
     return (
         <div className='order'>
             <h2>Order Confirmation</h2>
             <p>{moment().format('MMMM Do YYYY, h:mma')}</p>
-            
+            <p>{shippingType}</p>
             {latestOrder?.map(item => (
                 <CheckoutProduct
                     id = {item.id}

@@ -32,7 +32,7 @@ function CheckoutProduct({ id, title, price, rating, image, hideButton }) {
                     }
                 </div>
                 {!hideButton && (
-                    <button onClick={removeFromBasket}>Remove from Basket</button>
+                    <button onClick={removeFromBasket}>Remove from Cart</button>
                 )}
             </Col>
         </Row>

@@ -2,14 +2,16 @@ import React, { useState, useEffect } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Review from './Review.js';
+import Form from 'react-bootstrap/Form';
+import { useForm } from "react-hook-form";
 import { useStateValue } from './StateProvider';
 import './ViewProduct.css';
 
 function ViewProduct({id, title, price, rating, image }) {
     
     const [{viewProduct}, dispatch] = useStateValue();
-    const [reviewDesc, setReviewDesc] = useState('');
     const [newReviews, setNewReviews] = useState([]);
+    const { register, handleSubmit, errors, reset } = useForm();
 
     useEffect(() => {
         setNewReviews([]);
@@ -28,13 +30,19 @@ function ViewProduct({id, title, price, rating, image }) {
         })
     }
 
-    const submitReview = () => {
+    const onSubmit = (data, e) => {
+        console.log(data);
         setNewReviews(currentValue => [{
-            rating: 5,
-            description: reviewDesc
-        }, ...currentValue])
-        setReviewDesc('');
+            rating: parseInt(data.rating),
+            description: data.reviewDesc
+        }, ...currentValue]);
+        e.target.reset();
     }
+
+    useEffect(async () => {
+        const result = await fetch('./api/formValues.json'); // result: { firstName: 'test', lastName: 'test2' }
+        reset(result); // asynchronously reset your form values
+    }, [reset])
 
     return (
         <div className='view'>
@@ -74,11 +82,22 @@ function ViewProduct({id, title, price, rating, image }) {
                     </div>  
                 </Col>
                 <Col md={12} className='mt-3'>
+                <Form onSubmit={handleSubmit(onSubmit)}>
                     <div className="view__review">
                         <h3>Review Product</h3>
-                        <textarea placeholder='Write a review...' value={reviewDesc} onChange={(e) => setReviewDesc(e.target.value)} />
-                        <button onClick={submitReview}>Submit</button>
-                    </div>     
+                        {(errors.rating || errors.reviewDesc) && <p className='payment__error'>Rating and Review required!</p>}                  
+                        <Form.Control name='rating' as='select' ref={register({ required: true })} defaultValue='Select condition rating...'>
+                            <option value=''>Select rating...</option>
+                            <option value={1}>1 - Very Bad</option>
+                            <option value={2}>2 - Bad</option>
+                            <option value={3}>3 - Average</option>
+                            <option value={4}>4 - Good</option>
+                            <option value={5}>5 - Great</option>
+                        </Form.Control>
+                        <textarea placeholder='Write a review...' name='reviewDesc' ref={register({ required: true })} />
+                        <button type='submit'>Submit</button>                      
+                    </div> 
+                    </Form>    
                 </Col>
                 <Col md={12} className='mt-3'>
                     <div className="view__userReviews">

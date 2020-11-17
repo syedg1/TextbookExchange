@@ -1,4 +1,6 @@
 import React from 'react';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import './CheckoutProduct.css';
 import { useStateValue } from './StateProvider';
 
@@ -12,10 +14,11 @@ function CheckoutProduct({ id, title, price, rating, image, hideButton }) {
         })
     }
     return (
-        <div className='checkoutProduct'>
+        <Row className='checkoutProduct'>
+            <Col lg={2} md={12}> 
             <img className='checkoutProduct__image' src={image} alt="item"/>
-
-            <div className="checkoutProduct__info">
+            </Col>
+            <Col lg={10} md={12} className="checkoutProduct__info">
                 <p className='checkoutProduct__title'>{title}</p>
                 <p className='checkoutProduct__price'>
                     <small>$</small>
@@ -31,8 +34,8 @@ function CheckoutProduct({ id, title, price, rating, image, hideButton }) {
                 {!hideButton && (
                     <button onClick={removeFromBasket}>Remove from Basket</button>
                 )}
-            </div>
-        </div>
+            </Col>
+        </Row>
     )
 }
 

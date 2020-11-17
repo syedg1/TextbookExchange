@@ -110,7 +110,7 @@ function Home() {
                     <Product 
                         id = '6'
                         title = 'Introduction to Electrodynamics'
-                        price = {84.50}
+                        price = {84.59}
                         rating = {5}
                         image = 'https://campusstore.mcmaster.ca/cgi-mcm/ws/getTradeImage.pl?isbn=9781108420419&full_ind='
                     />
@@ -124,7 +124,7 @@ function Home() {
                     <Product 
                         id = '5'
                         title = 'Propositional and Predicate Calculus'
-                        price = {99.50}
+                        price = {99.59}
                         rating = {5}
                         image = 'https://campusstore.mcmaster.ca/cgi-mcm/ws/getTradeImage.pl?isbn=9781852339210&full_ind='
                     />
@@ -136,7 +136,7 @@ function Home() {
                     <Product 
                         id = '14'
                         title = 'Silicon VLSI Technology'
-                        price = {190.00}
+                        price = {190.99}
                         rating = {4}
                         image = 'https://campusstore.mcmaster.ca/cgi-mcm/ws/getTradeImage.pl?isbn=9780130850379&full_ind='
                     />
@@ -164,7 +164,7 @@ function Home() {
                     <Product 
                         id = '7'
                         title = 'Clean Code: An Introduction to Agile Software Craftmanship'
-                        price = {62.50}
+                        price = {62.59}
                         rating = {4}
                         image = 'https://campusstore.mcmaster.ca/cgi-mcm/ws/getTradeImage.pl?isbn=9780132350884&full_ind='
                     />

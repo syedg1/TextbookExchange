@@ -12,6 +12,7 @@
     padding: 30px;
     margin: 0 10%;
     margin-bottom: 130px;
+    min-width: 200px;
 }
 
 .custom-file-input:hover {

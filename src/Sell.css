@@ -1,0 +1,38 @@
+.sell {
+    padding: 30px;
+}
+
+.sell__header {
+    text-align: center;
+    margin: 20px 0 50px 0;
+}
+
+.sell__form {
+    background-color: white;
+    padding: 30px;
+    margin: 0 10%;
+    margin-bottom: 130px;
+}
+
+.custom-file-input:hover {
+    cursor: pointer !important;
+}
+.formSubmit {
+    width: 30%;
+    margin: 60px 35% 20px 35%;
+}
+
+.sell__error {
+    color: #bf1650;
+  }
+  
+.sell__error::before {
+display: inline;
+content: "⚠ ";
+}
+
+.sell__label::after {
+    display: inline;
+    content: " *";
+    color: red;
+}

@@ -1,0 +1,71 @@
+.login {
+    padding: 30px;
+}
+
+.login__card {
+    padding: 24px 24px 30px;
+    text-align: center;
+    font-size: 16px;
+    background-color: white;
+    width: 30%;
+    min-width: 350px;
+    margin: 50px auto;
+    margin-bottom: 130px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.login__card > h5 {
+    margin-bottom: 24px;
+    font-weight: 700;
+    padding: 0 12%;
+}
+
+.login__input {
+    border-radius: 30px !important;
+    line-height: 24px !important;
+    padding: 11px 21px;
+    height: auto !important;
+}
+
+.login__label {
+    font-family: 'Roboto', sans-serif !important;
+    font-style: normal;
+    margin-top: 8px;
+    font-weight: 300 !important;
+}
+
+small {
+    color: #6c757d !important;
+}
+
+.login__button {
+    margin: 30px 0 10px 0;
+    background-color: #7a003c;
+    text-align: left;
+    padding-right: 35px;
+    padding-left: 35px;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 14px;
+    border-radius: 24px;
+    text-transform: uppercase;
+    line-height: 18px;
+    letter-spacing: 1px;
+    height: 48px;
+    border: none;
+    text-decoration: none;
+}
+
+.login__button:hover {
+    background-color: #5e6a71;
+}
+
+.login__required {
+    color: red;
+}
+
+.login__required::before {
+    display: inline;
+    content: "⚠ ";
+}

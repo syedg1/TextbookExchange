@@ -1,0 +1,106 @@
+.view {
+    padding: 40px;
+}
+
+.view__product {
+    display: flex;
+    background-color: white;
+    padding: 40px;
+    height: 100%
+}
+
+.view__imageContainer {
+    width: 100%;
+    margin: 0 10px;
+}
+
+.view__imageContainer > img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 5% 25%;
+}
+
+.view__productInfo {
+    margin-left: 10%;
+    overflow-wrap: break-word;
+}
+
+.view__productInfo > h1 {
+    padding-right: 30px;
+}
+
+.view__productInfo > h2 {
+    margin-top: 25px;
+}
+
+.view__shipping {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100%; 
+    padding: 30px;
+}
+
+.view__shippingDate > p {
+    margin-bottom: 25px;
+}
+
+.view__shippingDate {
+    flex-basis: 30%;
+}
+
+.view__shippingCost {
+    flex-basis: 5%;
+    display: flex;
+}
+
+.view__shippingCost > p {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.view__shippingInfo {
+    flex-basis: 40%
+}
+
+.view__stock {
+    color: #007B4B;
+    font-weight: 500;
+}
+
+.view__shipping > button {
+    width: 100%;
+    margin: 10% auto 0 auto;
+    background-color: #f0c14b;
+    border: 1px solid; 
+    border-color: #a88734 #9c7e31 #846a29;
+    cursor: pointer;
+}
+
+.view__review {
+    background-color: white;
+    padding: 30px;
+}
+
+.view__review > textarea {
+    resize: none;
+    width: 100%;
+    height: 100px;
+    margin: 15px 0;
+}
+
+.view__review > button {
+    width: 20%;
+    margin-left: 80%;
+    background-color: #f0c14b;
+    border: 1px solid; 
+    border-color: #a88734 #9c7e31 #846a29;
+    cursor: pointer;
+}
+
+.view__userReviews {
+    background-color: white;
+    padding: 30px;
+    border-bottom: 5px solid white;
+    margin-bottom: 130px;
+}

@@ -2,6 +2,22 @@
     padding: 40px 20px;
 }
 
+.Toastify__toast {
+    background-color: #FDBF57 !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+    color: #56002a;
+}
+
+.Toastify__toast-container {
+    margin: 5px 0;
+    padding: 0 10px;
+}
+
+.Toastify__progress-bar--default {
+    background:#5E6A71 !important;
+}
+
 .view__product {
     display: flex;
     background-color: white;

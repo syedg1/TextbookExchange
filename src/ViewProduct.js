@@ -3,12 +3,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Review from './Review.js';
 import Form from 'react-bootstrap/Form';
+import Toast, { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useForm } from "react-hook-form";
 import { useStateValue } from './StateProvider';
 import './ViewProduct.css';
 
 function ViewProduct({id, title, price, rating, image }) {
-    
+    toast.configure();
     const [{viewProduct}, dispatch] = useStateValue();
     const [newReviews, setNewReviews] = useState([]);
     const { register, handleSubmit, errors, reset } = useForm();
@@ -28,6 +30,11 @@ function ViewProduct({id, title, price, rating, image }) {
                 image: viewProduct.image
             }
         })
+    }
+
+    const handleAdd = () => {
+        addToBasket();
+        toast('Added to Cart!', {position: toast.POSITION.TOP_CENTER, autoClose: 2000});
     }
 
     const onSubmit = (data, e) => {
@@ -78,7 +85,7 @@ function ViewProduct({id, title, price, rating, image }) {
                         </div>
                         <p className="view__shippingInfo">Receive FREE shipping on all items when you purchase over $200!</p>                          
                         <b className="view__stock">In Stock</b>
-                        <button onClick={addToBasket}>Add to Cart</button>
+                        <button onClick={handleAdd}>Add to Cart</button>
                     </div>  
                 </Col>
                 <Col md={12} className='mt-3'>
@@ -116,7 +123,6 @@ function ViewProduct({id, title, price, rating, image }) {
                     </div>
                 </Col>
             </Row>
- 
         </div>
     )
 }

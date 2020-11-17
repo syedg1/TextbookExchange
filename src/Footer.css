@@ -40,6 +40,9 @@
 
 .footer__countryName {
     height: 30px;
-    color: white;
     margin: auto 10px 6px 10px;
+}
+
+.footer__countryName > small {
+    color: white !important;
 }

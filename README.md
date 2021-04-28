@@ -1,6 +1,8 @@
 # Textbook Exchange
 This project is hosted at: https://mcmaster-textbookexchange.herokuapp.com/
 
+**_Important_**: Heroku sites go to sleep if they do not receive traffic, which may cause the request to timeout. If this occurs, please try loading the URL in a new tab.
+
 This is a responsive web app that contains the following features: 
 - Catalog
 - Sell Textbook

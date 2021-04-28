@@ -1,3 +1,4 @@
+#Textbook Exchange
 This project is hosted at: https://mcmaster-textbookexchange.herokuapp.com/
 
 This is a responsive web app that contains the following features: 
